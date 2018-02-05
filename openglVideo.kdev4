@@ -1,0 +1,4 @@
+[Project]
+Name=openglVideo
+Manager=KDevCMakeManager
+VersionControl=kdevgit
