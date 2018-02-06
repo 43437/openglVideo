@@ -9,12 +9,12 @@ set(src_dir ${base_dir})
 
 file(GLOB src_files ${src_dir}/*.cpp)
 
-include_directories("/home/acmax/app/ffmpeg-dev/include/")
+include_directories("/home/geyu/app/ffmpeg-dev/include/")
 
-link_directories("/home/acmax/app/ffmpeg-dev/lib")
+link_directories("/home/geyu/app/ffmpeg-dev/lib")
 
 add_executable(openglvideo ${src_files})
 
-target_link_libraries(openglvideo GL GLEW glfw avformat avcodec avutil swscale)
+target_link_libraries(openglvideo GL GLEW glfw avformat avcodec avutil swscale pthread)
 
 #install(TARGETS openglvideo RUNTIME DESTINATION bin)

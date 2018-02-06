@@ -2,6 +2,8 @@
 #define __VIDEO_CLASS__
 
 #include <iostream>
+#include <mutex>
+#include "WindowView.hpp"
 
 extern "C"{
 #include "libavformat/avformat.h"
@@ -16,6 +18,9 @@ class VideoClass{
   
   AVFormatContext *inFmtCtx;
   AVCodecContext *inDecCtx;
+  int64_t width;
+  int64_t height;
+  
   int videoIndex;
   int openInput();
 public:
